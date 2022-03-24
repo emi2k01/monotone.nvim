@@ -104,8 +104,11 @@ return lush(function()
 		CursorLine({ bg = Normal.bg[offset_fn](5) }), -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
 		Directory({}), -- directory names (and other special names in listings)
 		DiffAdd({ fg = green }), -- diff mode: Added line |diff.txt|
+		DiffAdded({ fg = green }), -- diff mode: Added line |diff.txt|
 		DiffChange({ fg = yellow }), -- diff mode: Changed line |diff.txt|
+		DiffChanged({ fg = yellow }), -- diff mode: Changed line |diff.txt|
 		DiffDelete({ fg = red }), -- diff mode: Deleted line |diff.txt|
+		DiffRemoved({ fg = red }), -- diff mode: Deleted line |diff.txt|
 		DiffText({ fg = s.inv, bg = red }), -- diff mode: Changed text within a changed line |diff.txt|
 		EndOfBuffer({ fg = eob }), -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
 		-- TermCursor   { }, -- cursor in a focused terminal
